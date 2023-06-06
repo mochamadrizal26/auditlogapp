@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://auditlogserver.database.windows.net:1433;database=auditlogdb;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: auditlog
+    password: audit123!
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
+        format_sql: true
+    show-sql: true
+  main:
+    web-application-type: servlet
