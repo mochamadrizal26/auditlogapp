@@ -3,7 +3,7 @@ package com.example.auditlog.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(code = HttpStatus.NOT_FOUND)
+@ResponseStatus(code = HttpStatus.OK)
 public class ResourceNotFoundException extends RuntimeException{
 
     public ResourceNotFoundException(String message) {

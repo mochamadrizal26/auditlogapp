@@ -39,4 +39,16 @@ public class LogService {
         logDao.insertLog(log);
     }
 
+    public List<Integer> getAllIds(){
+        return logDao.selectAllIds();
+    }
+
+    public void deleteAllLogs(){
+        logDao.deleteAllLogs();
+    }
+
+    public void deleteLogById(Integer id){
+        logDao.deleteLogById(id);
+    }
+
 }

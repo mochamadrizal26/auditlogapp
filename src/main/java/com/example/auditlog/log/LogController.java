@@ -30,4 +30,20 @@ public class LogController {
             @RequestBody LogRequest request){
         logService.addLog(request);
     }
+
+    @GetMapping("ids")
+    public List<Integer> getIds(){
+        return logService.getAllIds();
+    }
+
+    @DeleteMapping
+    public void deleteAllLogs() {
+        logService.deleteAllLogs();
+    }
+
+    @DeleteMapping(path = "{logId}")
+    public void deleteLogById(@PathVariable("logId") Integer logId) {
+        logService.deleteLogById(logId);
+    }
+
 }
